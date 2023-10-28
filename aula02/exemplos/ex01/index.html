@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #content {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+ 
+</head>
+<body>
+    <h1>Introduzindo JavaScript no HTML</h1>
+  
+    <button id="meuBotao">
+        Clique aqui
+    </button>
+    <div id="content">
+        Clique no botão para ver a mudança de texto.
+    </div>
+   
+   <script>
+       const botao = document.getElementById("meuBotao");
+        let contador = 0;
+
+       function alterarTexto(){
+          const content = document.getElementById("content");
+          content.textContent = "Olá mundo";
+          contador++;
+          botao.innerHTML = `Clique aqui, (${contador})`;
+        }   
+       botao.addEventListener("click",alterarTexto); 
+    
+    </script>
+</body>
+</html>
