@@ -6,6 +6,13 @@ function alterarTexto(){
   const content = document.getElementById("content");
   content.textContent = "Olá mundo";
   contador++;
+
+  if(content.textContent != "Olá mundo"){
+    content.textContent = "Olá mundo";
+  } else {
+    content.textContent= "Clique no botão para ver a mudança de texto";
+  }
+
   botao.innerHTML = `Clique aqui, (${contador})`;
 }   
 
